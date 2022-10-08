@@ -3,7 +3,7 @@
 #include <time.h>
 #include <stdlib.h>
 
-// srand(time(NULL));
+
 
 struct Player{ // define o usuario com suas caracteristicas, duas cartas inicias, um total e uma possivel adicional
 
@@ -13,9 +13,9 @@ struct Player{ // define o usuario com suas caracteristicas, duas cartas inicias
     int carta3;
 };
 
-struct Player getPlayerInitial(){ // da a um usiario suas caracteristicas basicas
 
-    srand(time(NULL));
+
+struct Player getPlayerInitial(){ // da a um usiario suas caracteristicas basicas
 
     struct Player p1; // o usuario a ser gerado
 
@@ -64,6 +64,8 @@ struct Player playDealer(struct Player dealer){
 
 int main() {
 
+   srand(time(NULL));
+
    printf("Bem vindo ao 21, o objetivo do jogo e chegar o mais proximo possivel de 21 pontos sem passar\n");
    printf("Voce pode pedir quantas cartas quiser\n");
    printf("O dealer ira pedir cartas ate 17 mas ele pode passar.\n");
@@ -97,7 +99,7 @@ int main() {
 
             if (temp == 1){
 
-                srand(time(NULL));
+
 
                 int c3;
 
